@@ -2,11 +2,10 @@ from flask import render_template as render, flash, redirect, url_for
 from flask_login import login_user, logout_user, login_required
 from . import Autentificacion
 from app.modelo import UserModel
-from .formularios import LoginForm, RegistrarUsuario
-from flask import Request
+from .formularios import LoginForm
 
 
-@Autentificacion.route('/login', methods=['GET', 'POST'])
+@Autentificacion.route('/Login', methods=['GET', 'POST'])
 def login():
     """ Método vista para el login de usuarios. """
     login_form = LoginForm()

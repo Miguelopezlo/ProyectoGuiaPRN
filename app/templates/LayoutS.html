@@ -44,7 +44,7 @@
                 </ul>
         </header>
         </div>
-        {% block contenido %} {% endblock %}
+        {% block contenido %} {% block content %}{% endblock %} {% endblock %}
         <!--	--------------->
 
         <div class="contenedor-menu">
@@ -105,7 +105,7 @@
                     <hr>
                     <ul class="nav nav-pills">
                         <li>
-                            <a href="{{url_for('logout')}}">
+                            <a href="#">
                                 <i class="bi bi-box-arrow-in-left"></i>
                                 <span>Cerrar Sesion</span>
                             </a>
