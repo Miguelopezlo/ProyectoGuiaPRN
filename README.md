@@ -10,10 +10,6 @@ pip 21.3
 node v14.15.1
 npm 6.14.11
 
-# node-modules - carpeta static
-cd app/static
-npm init
-npm install sweetalert2
 
 # Instalar el ambiente virtual
 cd ../../
@@ -22,6 +18,12 @@ virtualenv venv
 
 # Activar el entorno virtual en Windows
 ./Entorno/scripts/activate
+
+# node-modules - carpeta static
+cd app/static
+npm init
+npm install sweetalert2
+
 
 # Agregamos las dependencias al archivo de requerimientos y ejecutamos el comandos - archivo en la raíz del proyecto 
 cd ../../
@@ -45,3 +47,5 @@ $env:FLASK_ENV='development'
 # NOTA (OPCIONAL) Reinicar (Base de datos) y configuración (user Default) 
     - Configurar usuario por defecto en app/migrate.py
 ip:port/database
+
+
