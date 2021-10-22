@@ -5,7 +5,15 @@ from app.modelo import UserModel
 from .formularios import  RegistrarUsuario
 
 
-@Administrador.route('/registrar', methods=['GET', 'POST'])
+
+
+
+@Administrador.route('/Inicio', methods = ['GET', 'POST'])
+def Inicio():
+    return render('Administrador/Inicio.html')
+
+@Administrador.route('/CrearUsuarios', methods=['GET', 'POST'])
+@login_required
 def signup():
     """ Método vista para el registro de usuarios. """
     register_form = RegistrarUsuario()

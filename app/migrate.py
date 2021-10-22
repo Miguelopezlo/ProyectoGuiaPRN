@@ -17,10 +17,10 @@ def init_db():
         email='morenofj@uninorte.edu.co',
         cellphone='3104207720',
         username='Javier',
-        is_Admin=True,
-        is_Docente=False,
-        is_Estudiante=False,
+        Rol='1'
     )
     admin.set_password("Adm1n**123")
     db.session.add(admin) 
     db.session.commit()  #Registrar Cambios
+
+   

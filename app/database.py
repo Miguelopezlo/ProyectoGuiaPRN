@@ -16,9 +16,7 @@ class User(db.Model):
     cellphone = db.Column(db.String(100), nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(250), nullable=False)
-    is_Admin = db.Column(db.Boolean, default=False)
-    is_Docente = db.Column(db.Boolean, default=False)
-    is_Estudiante = db.Column(db.Boolean, default=False)
+    Rol = db.Column(db.String, nullable=False)
     avatar = db.Column(db.String(250), nullable=True)
 
     def __repr__(self):

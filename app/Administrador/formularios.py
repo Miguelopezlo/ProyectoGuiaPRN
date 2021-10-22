@@ -15,9 +15,9 @@ class RegistrarUsuario(FlaskForm):
         EqualTo('password_confirm')
     ])
     password_confirm = PasswordField("Confimarción de contraseña", validators=[DataRequired(), Length(min=6, max=10)])
-    Rol= RadioField('Rol', choices=[('is_Admin','Administrador'),('is_Docente','Docente'), ('is_Estudiante','Etudiante')])
+    Rol= RadioField('Rol', choices=[('1','Administrador'),('2','Docente'), ('3','Etudiante')])
 
 
-    submit = SubmitField("Registrar")
+    submit = SubmitField("Crear")
   
 
