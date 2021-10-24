@@ -28,7 +28,7 @@ def create_app():
     app.register_blueprint(Administrador)
     app.register_blueprint(Docente)
     app.register_blueprint(Estudiante)
-
+    
     
     login_manager.init_app(app)
     db.init_app(app)

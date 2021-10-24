@@ -15,3 +15,4 @@ class UserModel(UserMixin):
         """ Método para obtener el usuario a partir del username. """
         user_data = get_user_by_username(username)
         return UserModel(user_data)
+   

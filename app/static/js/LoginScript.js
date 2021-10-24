@@ -1,4 +1,4 @@
-function mostrarPassword() {
+/* function mostrarPassword() {
     var cambio = document.getElementById("txtPassword");
     if (cambio.type == "password") {
         cambio.type = "text";
@@ -7,4 +7,23 @@ function mostrarPassword() {
         cambio.type = "password";
         $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
     }
+} */
+
+
+const getTitleMessageFromCategory = category => {
+    const titles = {
+        'success': 'Bien hecho!',
+        'warning': 'Atención!',
+        'info': 'Atención!',
+        'error': 'Oops...!',
+    }
+    return titles[category]
+}
+
+function showMessageAlert(category, message) {
+    Swal.fire({
+        icon: category,
+        title: getTitleMessageFromCategory(category),
+        text: message
+    })
 }

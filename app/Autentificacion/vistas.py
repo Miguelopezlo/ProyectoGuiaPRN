@@ -21,10 +21,6 @@ def Login():
             if user.check_password(login_form.password.data):
                 user_model = UserModel(user)
                 login_user(user_model)
-                flash("Bienvenido al sistema de Gestion de Notas", category="info")
-
-
-
                 return redirect(url_for("Administrador.Inicio"))
             else:
                 flash("Credenciales incorrectas", category="error")
@@ -36,7 +32,6 @@ def Login():
 
 
 
-    return render('Autentificacion/Login.html', **context)
 
 @Autentificacion.route('/Login2',methods=['GET', 'POST'])
 def login2():

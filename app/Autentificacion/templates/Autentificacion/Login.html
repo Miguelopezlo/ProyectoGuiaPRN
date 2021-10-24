@@ -26,7 +26,13 @@
         </div>
         <script src="{{url_for('static', filename='js/LoginScript.js')}}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        <script src="{{ url_for('static', filename='node_modules/sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/mensajes.js') }}"></script>
+        {% with messages = get_flashed_messages(with_categories=True) %} {% if messages %} {% for category, message in messages %}
+        <script>
+            showMessageAlert("{{category}}", "{{message}}");
+        </script>
+        {% endfor %} {% endif %} {% endwith %}
     </body>
 
 </html>

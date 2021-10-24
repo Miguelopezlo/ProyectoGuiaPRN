@@ -7,15 +7,19 @@ def get_user_by_username(username):
 
 def registro_usuarios(user_data):
     user = User(
+    Rol= user_data['Rol'],
     nombre=user_data['nombre'],
     apeliido=user_data['apellido'],
     email=user_data['email'],
     cellphone=user_data['cellphone'],
     username=user_data['username'],
     password=user_data['password'],
-    Rol= user_data['Rol']
-    
+   
     )
-    User.set_password(user_data['password'])
+    user.set_password(user_data['password'])
     db.session.add(user)
     db.session.commit()
+
+
+    
+

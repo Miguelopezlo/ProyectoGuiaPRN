@@ -10,13 +10,13 @@ class User(db.Model):
     __tablename__ = 'Users'
 
     id = db.Column(db.Integer, primary_key=True)
+    Rol = db.Column(db.String, nullable=False)
     nombre = db.Column(db.String(80), nullable=False)
     apeliido = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     cellphone = db.Column(db.String(100), nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(250), nullable=False)
-    Rol = db.Column(db.String, nullable=False)
     avatar = db.Column(db.String(250), nullable=True)
 
     def __repr__(self):
