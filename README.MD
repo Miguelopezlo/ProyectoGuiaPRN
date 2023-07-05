@@ -1,4 +1,4 @@
-# Gestion de notas :V
+
 
 # Instalar Python - https://www.python.org/  - instalar pip -> se selecciona en la instalación de python.
 Python 3.9.7
